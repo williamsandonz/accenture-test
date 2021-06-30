@@ -20,7 +20,6 @@ class TodoController {
 
   post(request: Request, response: Response, next: Function) {
     const body = request.body;
-    // NB not using request.body as is to prevent malicious client adding unwanted props
     const item = new ToDoItem(
       body.text,
       uuidv4(),
@@ -37,8 +36,7 @@ class TodoController {
       return response.sendStatus(404);
     }
     const body = request.body;
-    // NB: not using request.body as is to prevent malicious client adding unwanted props
-    // Also, not saving ID as that shouldn't ne changeable.
+    // NB: Not saving ID as that shouldn't ne changeable.
     todoDataService.upsertItem(Object.assign(item, body));
     response.send(item);
   }

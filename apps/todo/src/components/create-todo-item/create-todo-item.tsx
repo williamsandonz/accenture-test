@@ -17,7 +17,7 @@ export const CreateTodoItem: React.FC<Props> = ({ saveItem }) => {
     setItem({
       ...item,
       [e.currentTarget.id]: e.currentTarget.value,
-    } as ITodoItem)
+    } as ITodoItem);
   };
 
   const addNewItem = (e: React.FormEvent) => {
@@ -26,7 +26,7 @@ export const CreateTodoItem: React.FC<Props> = ({ saveItem }) => {
     setItem({
       ...item,
       text: ''
-    })
+    });
   };
 
   return (
