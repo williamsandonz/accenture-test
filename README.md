@@ -3,7 +3,7 @@
 Prerequisites:
 
  - Ensure you have envsubst installed & available in your path.
- - Rename .local.env.sample to .local.env
+ - Rename .local.env.sample to .local.env (in root)
  - `npm install -g @nrwl/cli`
  - `npm install`
 
