@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import { Subject } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { exceptionService } from './exception.service';
+import * as path from 'path';
 
 class TodoDataService {
 
@@ -14,7 +15,7 @@ class TodoDataService {
 
   // NX uses uses /assets dir copied to dist at runtime so this path will cause bundling issues
   // if app ever productionised but sufficicent for purposes of test
-  private filePath = `${__dirname}/../../../apps/api/data.json`;
+  private filePath = path.normalize(`${__dirname}/../../../apps/api/data.json`);
 
   onAppInit() {
     this.loadFromFile();
