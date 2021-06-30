@@ -9,14 +9,16 @@ type Props = {
 
 export const CreateTodoItem: React.FC<Props> = ({ saveItem }) => {
 
-  const [item, setItem] = React.useState<ITodoItem>()
+  const [item, setItem] = React.useState<ITodoItem>({
+    text: ''
+  });
 
   const onChange = (e: any) => {
     setItem({
       ...item,
       [e.currentTarget.id]: e.currentTarget.value,
     } as ITodoItem)
-  }
+  };
 
   const addNewItem = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ export const CreateTodoItem: React.FC<Props> = ({ saveItem }) => {
       ...item,
       text: ''
     })
-  }
+  };
 
   return (
     <form onSubmit={addNewItem} className="create-todo-form">
@@ -43,4 +45,5 @@ export const CreateTodoItem: React.FC<Props> = ({ saveItem }) => {
       </Button>
     </form>
   )
+
 }
