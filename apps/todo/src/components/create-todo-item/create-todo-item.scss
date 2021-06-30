@@ -1,0 +1,10 @@
+@import '../../styles/includes.scss';
+
+.create-todo-form {
+  margin: 0 auto;
+  max-width: 300px;
+  button {
+    margin-left: $gutter;
+    align-self: center;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../styles/includes.scss';
+
+header {
+  padding: 10px $gutter;
+  margin: 0 0 40px;
+  border-bottom: 1px solid $grey;
+  display: flex;
+  align-items: center;
+  background: white;
+  .logo {
+    flex-basis: 36px;
+    height: 36px;
+    display: flex;
+    background: url(https://via.placeholder.com/36x36);
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include media-breakpoint-up(sm) {
+      flex-basis: 126px;
+      background: url(https://via.placeholder.com/126x36);
+    }
+  }
+  strong {
+    margin-left: $gutter;
+    font-weight: normal;
+  }
+}

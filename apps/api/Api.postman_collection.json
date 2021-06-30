@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "8d9b71cb-473f-4f36-8500-17cf76f3f01f",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "todos",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/todos",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "/ (Full)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Sample TODO Item #1 (updated from postman)\",\n    \"done\": false\n}"
+						},
+						"url": {
+							"raw": "{{API_URL}}/todo/123-456-789",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo",
+								"123-456-789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (Partial)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"done\": true\n}"
+						},
+						"url": {
+							"raw": "{{API_URL}}/todo/123-456-789",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo",
+								"123-456-789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (Invalid - Not Found)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/todo/999",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (Full)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Created from POSTMAN 1\",\n    \"done\": true\n}"
+						},
+						"url": {
+							"raw": "{{API_URL}}/todo",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (Partial)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"My new TODO item (Created in POSTMAN)\"\n}"
+						},
+						"url": {
+							"raw": "{{API_URL}}/todo",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (Invalid - Bad Request)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}"
+						},
+						"url": {
+							"raw": "{{API_URL}}/todo",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/todo/123-456-789",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo",
+								"123-456-789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (Invalid - Not Found)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/todo/ace195bb-08e0-4954-8dd5-abc018939873",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"todo",
+								"ace195bb-08e0-4954-8dd5-abc018939873"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

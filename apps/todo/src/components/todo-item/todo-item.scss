@@ -1,0 +1,9 @@
+@import '../../styles/includes.scss';
+
+.todo-item {
+  list-style-type: none;
+  text-align: center;
+  .MuiCheckbox-root {
+    margin: 0 $gutter;
+  }
+}

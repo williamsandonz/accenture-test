@@ -1,0 +1,13 @@
+@import '../../styles/includes.scss';
+
+#root {
+  flex: 1;
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  background: $off-white;
+}
+main {
+  flex: 1;
+  padding: 0 $gutter;
+}
