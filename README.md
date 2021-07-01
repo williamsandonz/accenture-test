@@ -2,7 +2,7 @@
 
 Prerequisites:
 
- - Ensure you have envsubst installed & available in your path.
+ - Ensure you have envsubst installed (If you're on Windows, download exe [here](https://github.com/a8m/envsubst/releases) and add to your path)
  - Rename .local.env.sample to .local.env (in root)
  - `npm install -g @nrwl/cli`
  - `npm install`
