@@ -28,7 +28,13 @@ There is a POSTMAN collection in apps/api that has presets for various scenarios
 
 ## Notes from author:
 
-Time taken: 15 hours (Bit slow due to first React experience & express rustiness). Express (6hrs) React (9hrs).
+Time taken: 15 hours
+ - Understanding requirements, research & planing     (2 hours)
+ - Setup NX skeleton, libs, environment injection     (2 hours)
+ - Node                                               (4.5 hours)
+ - React                                              (5 hours)
+ - Testing (POSTMAN & app)                            (1 hours)
+
 
 Architectural choices
  - NX is a monorepo framework designed to house all services for a project within a single repository. I chose it as it elegantly enables the sharing of types & logic between front and backend and various other services adhering to the DRY principle. The CLI also offers handy features for environment values and build tooling.
